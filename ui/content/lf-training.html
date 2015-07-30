@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="en" class="ui-app">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="generator" content="Digilär - digitala läromedel" />
+      <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+      <!-- Chrome for Android theme color -->
+      <meta name="theme-color" content="#303F9F">
+
+      <!-- Web Application Manifest -->
+      <link rel="manifest" href="manifest.json">
+
+      <!-- Tile and Title for Win8 -->
+      <meta name="msapplication-TileColor" content="#402341">
+
+      <!-- Add to homescreen for Chrome on Android -->
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="application-name" content="Digilär - digitala läromedel">
+      <link rel="icon" sizes="192x192" href="../../assets/touch/chrome-touch-icon-192x192.png">
+
+      <!-- Add to homescreen for Safari on iOS -->
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta name="apple-mobile-web-app-title" content="Digilär - digitala läromedel">
+      <link rel="apple-touch-icon" href="../../assets/touch/apple-touch-icon.png">
+
+      <!-- Tile icon for Win8 (144x144) -->
+      <meta name="application-name" content="&nbsp;"/>
+      <meta name="msapplication-TileColor" content="#402341"/>
+      <meta name="msapplication-square70x70logo" content="assets/touch/tiny.png"/>
+      <meta name="msapplication-square150x150logo" content="assets/touch/square.png"/>
+      <meta name="msapplication-wide310x150logo" content="assets/touch/wide.png"/>
+      <meta name="msapplication-square310x310logo" content="assets/touch/large.png"/>
+
+      <!-- Title block allowing child pages to override -->
+      <title>UI - demo / prototyp </title>
+
+      <!-- Local ckeditor -->
+      <script src="//cdn.ckeditor.com/4.4.7/basic/ckeditor.js"></script>
+
+      <!-- Styles -->
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,600,700,300' rel='stylesheet' type='text/css'>
+
+      <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
+
+      <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css" media="all"/>
+
+      
+    </head>
+    <body class="ui-body ui-lesson-flow">
+
+      <nav class="ui-header">
+
+  <div class="ui-header-nav">
+    <div class="ui-header-settings">
+      <div class="ui-header-settings-avatar">
+        <i class="digicon-avatar"></i>
+      </div>
+      <div class="ui-header-settings-user">
+        <a class="ui-header-settings-name" href="overview-start.html"> Martin Berggren</a>
+      </div>
+      <div class="ui-ping--error">2</div>
+    </div>
+    <div class="ui-header-bread">
+      <ul class="ui-breadcrumb">
+        <li>
+          <button class="ui-btn-dropdown ui-btn--link">
+            <a href="work-areas.html">Religionskunskap</a>
+            <div class="ui-btn-dropdown-toggle-white" data-anijs="if: click, do: $toggleClass ui-dropdown--visible, to: .js-topic-dropdown">
+            </div>
+            <div class="ui-dropdown js-topic-dropdown">
+              <ul>
+                <li><a href="#">Ämne</a></li>
+                <li><a href="#">Ämne</a></li>
+                <li><a href="#">Ämne</a></li>
+                <li><a href="#">Ämne</a></li>
+              </ul>
+            </div>
+          </button>
+        </li>
+        <li>
+          <a href="vignette.html" class="ui-btn--link">Vinjett</a>
+        </li>
+        <li>
+          <button class="ui-btn-dropdown ui-btn--link">
+            <a href="ch-default.html">Kapitel</a>
+            <div class="ui-btn-dropdown-toggle-white" data-anijs="if: click, do: $toggleClass ui-dropdown--visible, to: .js-chapter-dropdown">
+            </div>
+            <div class="ui-dropdown js-chapter-dropdown">
+              <ul>
+                <li><a href="#">Forntiden</a></li>
+                <li><a href="#">I rymden lever alla lika länge</a></li>
+                <li><a href="#">Dropdown list</a></li>
+                <li><a href="#">Dropdown list</a></li>
+              </ul>
+            </div>
+          </button>
+        </li>
+        <li>
+          <a href="imgs-default.html" class="ui-btn--link ">Bildserie</a>
+        </li>
+        <li>
+          <a href="lf-video.html" class="ui-btn--link ">Arbetsflöde</a>
+        </li>
+      </ul>
+    </div>
+    <div class="ui-header-tools">
+      <div class="ui-header-tool" data-anijs="if: click, do: $addClass ui-panel--visible, to: .js-panel-search">
+        <i class="digicon-magnifier digicon-magnifier-white"></i>
+      </div>
+      <a class="ui-logo" href="overview-start.html"><div class="digicon-logo"></div></a>
+    </div>
+  </div>
+  <div class="ui-header-mobile-nav ui-icon-bar">
+    <div class="ui-icon-bar-area--left">
+      <a href="#" class="ui-back-history ui-icon-bar-icon"><i class="digicon-continue-white"></i></a>
+      <div class="ui-icon-bar-icon">
+        <i class="digicon-bookmark-outline-white"></i>
+      </div>
+    </div>
+    <div class="ui-icon-bar-area--center">
+      <a class="ui-logo ui-icon-bar-icon" href="overview-start.html"><div class="digicon-logo"></div></a>
+    </div>
+    <div class="ui-icon-bar-area--right">
+      <div class="ui-icon-bar-icon ui-header-search" data-anijs="if: click, do: $addClass ui-panel--visible, to: .js-panel-search">
+        <div class="digicon-magnifier-white"></div>
+      </div>
+      <div class="ui-icon-bar-icon ui-header-toggle" data-anijs="if: click, do: $addClass ui-panel--visible, to: .ui-mobile-main-nav">
+        <i class="digicon-hamburger-white"></i>
+      </div>
+    </div>
+  </div>
+</nav>
+
+      <main class="ui-wrapper">
+
+        
+  <section class="ui-section flex--column">
+
+    <section class="ui-section flex--row">
+      
+
+      
+
+      
+  <div class="ui-section">
+    <div class="ui-sidebar ui-sidebar--shrink padded-none contest-nav">
+      <div class="contest-nav-heading">4 nivåer</div>
+      <div class="contest-levels">
+        <div class="contest-level--active">1</div>
+        <div class="contest-step contest-step--completed"></div>
+        <div class="contest-step contest-step--completed"></div>
+        <div class="contest-step contest-step--started"></div>
+        <div class="contest-step"></div>
+        <div class="contest-step"></div>
+        <div class="contest-step"></div>
+        <div class="contest-step"></div>
+        <div class="contest-step"></div>
+        <div class="contest-step"></div>
+        <div class="contest-step"></div>
+        <div class="contest-step"></div>
+        <div class="contest-level">2</div>
+        <div class="contest-step"></div>
+        <div class="contest-step"></div>
+        <div class="contest-step"></div>
+        <div class="contest-step"></div>
+        <div class="contest-step"></div>
+        <div class="contest-step"></div>
+        <div class="contest-step"></div>
+        <div class="contest-step"></div>
+      </div>
+    </div>
+    <div class="ui-section contest-content flex--column">
+      <div class="ui-topbar"><a class="ui-btn--success" href="lf-training-wrong.html">Fel</a></div>
+        <div class="flex"></div>
+        <div class="flex--shrink">
+          <div class="ui-container--sm">
+
+            <div class="contest-assignment js-contest-assignment-wordselect">
+              <div class="ui-block">
+                <div class="ui-block-content">
+                  <h3 class="ui-text-h3">Välj ord</h3>
+                  <img src="../../assets/img/fill.png" alt="" />
+                </div>
+                <div class="ui-block-footer">
+                  <div class="ui-pull--right">
+                    <div class="ui-alert--success ui-alert--inline ui--hidden js-assignment-correct">Du hade rätt wohoo!!</div>
+                    <button class="ui-btn--success js-assignment-answer" data-anijs="if: click, do: $removeClass ui--hidden, to: .js-assignment-correct; if: click, do: $addClass ani-popIn ui--inline-block, to: .js-contest-nexts; if: click, do:$addClass contest-notification--success-in, to: .contest-notification--success; if: click, do:$addClass ui--hidden, to: .js-assignment-answer">Svara</button>
+                    <button class="ui-btn--default js-contest-nexts ui--hidden" data-anijs="if: click, do: $addClass ani-fadeOutDown, to: .js-contest-assignment-wordselect">Nästa steg</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="flex"></div>
+        <div class="contest-overlay js-contest-overlay--start contest-overlay--visible">
+          <div class="contest-overlay-inner ui-content">
+            <img class="u-sway" src="../../assets/img/exercise-competion.png">
+              <h1 class="ui-text-h3">Träning som tävling</h1>
+              <p>Tävling har flera nivåer. Du måste klara åtta uppgifter för att komma till nästa nivå</p>
+              <button class="js-contest-intro ui-btn--success" data-anijs="if: click, do: $addClass animated fadeOut pointer-events--none, to: .js-contest-overlay--start; if: click, do: $addClass ani-popIn, to: .js-contest-assignment-wordselect">Starta tävling</button>
+          </div>
+        </div>
+
+        <div class="contest-overlay js-contest-overlay--level">
+          <div class="contest-overlay-inner ui-content">
+              <img src="../../assets/img/exercise-competition-level.png" alt="" />
+              <h1 class="ui-text-h3">Du har klarat nivå 1!</h1>
+              <button class="js-contest-intro ui-btn--success" data-anijs="if: click, do: $addClass u-dropOut ui-pointer-events--none, to: .js-contest-overlay--level; if: click, do: $addClass contest-riseIn, to: .js-contest-assignment-define">Nästa nivå</button>
+          </div>
+        </div>
+
+        <div class="contest-overlay js-contest-overlay--completed">
+          <div class="contest-overlay-inner ui-content">
+              <img src="../../assets/img/exercise-competition-completed.png" alt="" />
+              <h1 class="ui-text-h3">Grattis du har klarat tävlingen!</h1>
+              <a href="lf-training.html" class="ui-btn--success">Gör igen</a>
+          </div>
+        </div>
+
+        <div class="contest-notification--success" data-anijs="if: animationend, on: .contest-notification--success, do: $addClass contest-notification--success-out">
+          <div class="contest-notification-wrapper">
+            <div class="contest-notification-content">
+              <img src="../../assets/img/exercise-success.png" alt="" />
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+
+      <div class="modal-overlay modal-overlay--out   text--center">
+        <article class="modal-body">
+          <header class="modal-header">
+            <h1 class="ui-text-h1">Are You a Rock Star?</h1>
+          </header>
+          <main class="modal-content">
+
+            <p>Detta arbetsflöde innehåller ett antal olika steg som du kan utföra i tur och ordning. När du är klar med ett steg navigerar du till nästa genom knapparna längst ner på skärmen. De flesta arbetsflöden inleds med en introduktion och slutar med reflektion där du kan bocka av vad du lärt dig. Om din lärare har kopplat till uppgifter visas de här nedanför.</p>
+            <a href="lf-introduction.html" class="ui-btn--default">Lärarhandledning</a>
+            <a href="lf-introduction.html" class="ui-btn--default">Lärarens uppgifter</a>
+            <a href="lf-introduction.html" class="ui-btn--default">Lättläst läge</a>
+          </main>
+          <footer class="modal-footer">
+            <a href="#" data-anijs="if: click, do: $addClass modal-overlay--out, to: .modal-overlay;if: click, do: $removeClass modal-overlay--visible, to: .modal-overlay;"><i class="digicon-play digicon-2x"></i> <strong>Starta kapitel</strong></a>
+          </footer>
+        </article>
+      </div>
+    </section>
+
+    <nav class="ui-flow-nav">
+      <div class="ui-flow-line">
+        <div class="ui-flow-prev">
+          <i class="digicon-arrow-left-white"></i>
+        </div>
+        <div class="ui-flow-nav-description ui-flow-nav-description--active" data-anijs="if:click, do: $removeClass modal-overlay--out, to: .modal-overlay;if:click, do: $addClass modal-overlay--visible, to: .modal-overlay">
+          <i class="digicon-help-white"></i>
+        </div>
+        <div class="ui-flow-masker">
+          <div class="ui-flow-container">
+            <div class="ui-flow-nav-step ">
+              <a href="lf-video.html">
+                <div class="ui-flow-nav-number">
+                  1
+                </div>
+                <div class="ui-flow-nav-title">
+                  Introduktion
+                </div>
+              </a>
+            </div>
+            <div class="ui-flow-nav-step ">
+              <a href="lf-creative.html">
+                <div class="ui-flow-nav-number">
+                  2
+                </div>
+                <div class="ui-flow-nav-title">
+                  Kreativa övningar
+                </div>
+              </a>
+            </div>
+            <div class="ui-flow-nav-step ">
+              <a href="lf-tool-fractions.html">
+                <div class="ui-flow-nav-number">
+                  3
+                </div>
+                <div class="ui-flow-nav-title">
+                  Redskap - sannolikhet
+                </div>
+              </a>
+            </div>
+            <div class="ui-flow-nav-step ">
+              <a href="lf-assignments-single.html">
+                <div class="ui-flow-nav-number">
+                  4
+                </div>
+                <div class="ui-flow-nav-title">
+                  Uppgifter
+                </div>
+              </a>
+            </div>
+            <div class="ui-flow-nav-step ">
+              <a href="lf-reflection.html">
+                <div class="ui-flow-nav-number">
+                  5
+                </div>
+                <div class="ui-flow-nav-title">
+                  Reflektion
+                </div>
+              </a>
+            </div>
+            <div class="ui-flow-nav-step ui-flow-nav-step--active">
+              <a href="lf-training.html">
+                <div class="ui-flow-nav-number">
+                  6
+                </div>
+                <div class="ui-flow-nav-title">
+                  Tävling som träning
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="ui-flow-next">
+          <i class="digicon-arrow-right-white"></i>
+        </div>
+      </div>
+    </nav>
+
+  </section>
+
+  
+    <nav class="ui-toolbar">
+  <div class="ui-toolbar-icons">
+    <div class="ui-toolbar-icon ui-toolbar-open" data-anijs="if: click, do: $addClass ui-toolbar--opened, to: body;if: click, do: $addClass ui--hidden, to: target;if: click, do: $removeClass ui--hidden, to: .ui-toolbar-close;">
+      <i class="digicon-chevron-left"></i>
+      <div class="ui-toolbar-icon--title">Öppna</div>
+    </div>
+    <div class="ui-toolbar-icon ui-toolbar-close ui--hidden" data-anijs="if: click, do: $removeClass ui-toolbar--opened, to: body;if: click, do: $addClass ui--hidden, to: target;if: click, do: $removeClass ui--hidden, to: .ui-toolbar-open;">
+      <i class="digicon-close"></i>
+      <div class="ui-toolbar-icon--title">Stäng</div>
+    </div>
+    <div class="ui-toolbar-icon" data-anijs="if:click, do: $removeClass ui-toolbar-icon--selected, to: .ui-toolbar-icon; if:click, do: $addClass ui-toolbar-icon--selected, to: target; if:click, do: $addClass ui-toolbar--opened, to: body; if:click, do: $removeClass ui-toolbar-section--visible, to: .ui-toolbar-section; if:click, do: $toggleClass ui-toolbar-section--visible, to: .js-ui-toolbar-intro;">
+      <i class="digicon-tools-intro"></i>
+      <!--<div class="icon-toolbar-instud"></div>-->
+      <div class="ui-toolbar-icon--title">Intro</div>
+    </div>
+    <div class="ui-toolbar-icon" data-anijs="if:click, do: $removeClass ui-toolbar-icon--selected, to: .ui-toolbar-icon; if:click, do: $addClass ui-toolbar-icon--selected, to: target; if:click, do: $addClass ui-toolbar--opened, to: body; if:click, do: $removeClass ui-toolbar-section--visible, to: .ui-toolbar-section; if:click, do: $toggleClass ui-toolbar-section--visible, to: .js-ui-toolbar-instud;">
+      <i class="digicon-tools-instud"></i>
+      <!--<div class="icon-toolbar-instud"></div>-->
+      <div class="ui-toolbar-icon--title">Frågor</div>
+    </div>
+    <div class="ui-toolbar-icon" data-anijs="if:click, do: $removeClass ui-toolbar-icon--selected, to: .ui-toolbar-icon; if:click, do: $addClass ui-toolbar-icon--selected, to: target; if:click, do: $addClass ui-toolbar--opened, to: body; if:click, do: $removeClass ui-toolbar-section--visible, to: .ui-toolbar-section; if:click, do: $toggleClass ui-toolbar-section--visible, to: .js-ui-toolbar-assignments;">
+      <i class="digicon-tools-assignment"></i>
+      <!--<div class="icon-toolbar-assignments"></div>-->
+      <div class="ui-toolbar-icon--title">Övningar</div>
+    </div>
+    <div class="ui-toolbar-icon" data-anijs="if:click, do: $removeClass ui-toolbar-icon--selected, to: .ui-toolbar-icon; if:click, do: $addClass ui-toolbar-icon--selected, to: target; if:click, do: $addClass ui-toolbar--opened, to: body; if:click, do: $removeClass ui-toolbar-section--visible, to: .ui-toolbar-section; if:click, do: $toggleClass ui-toolbar-section--visible, to: .js-ui-toolbar-assignments;">
+      <i class="digicon-tools-scissor"></i>
+      <!--<div class="icon-toolbar-assignments"></div>-->
+      <div class="ui-toolbar-icon--title">Klippbok</div>
+    </div>
+    <div class="ui-toolbar-icon" data-anijs="if:click, do: $removeClass ui-toolbar-icon--selected, to: .ui-toolbar-icon; if:click, do: $addClass ui-toolbar-icon--selected, to: target; if:click, do: $addClass ui-toolbar--opened, to: body; if:click, do: $removeClass ui-toolbar-section--visible, to: .ui-toolbar-section; if:click, do: $toggleClass ui-toolbar-section--visible, to: .js-ui-toolbar-quiz;">
+      <i class="digicon-tools-quiz"></i>
+      <!-- <div class="icon-toolbar-quiz"></div>-->
+      <div class="ui-toolbar-icon--title">Quiz</div>
+    </div>
+    <div class="ui-toolbar-icon" data-anijs="if:click, do: $removeClass ui-toolbar-icon--selected, to: .ui-toolbar-icon; if:click, do: $addClass ui-toolbar-icon--selected, to: target; if:click, do: $addClass ui-toolbar--opened, to: body; if:click, do: $removeClass ui-toolbar-section--visible, to: .ui-toolbar-section; if:click, do: $toggleClass ui-toolbar-section--visible, to: .js-ui-toolbar-notes;">
+      <!-- <div class="icon-toolbar-notes"></div>-->
+      <i class="digicon-tools-notes"></i>
+      <div class="ui-toolbar-icon--title">Anteckna</div>
+    </div>
+    <div class="ui-toolbar-icon" data-anijs="if:click, do: $removeClass ui-toolbar-icon--selected, to: .ui-toolbar-icon; if:click, do: $addClass ui-toolbar-icon--selected, to: target; if:click, do: $addClass ui-toolbar--opened, to: body; if:click, do: $removeClass ui-toolbar-section--visible, to: .ui-toolbar-section; if:click, do: $toggleClass ui-toolbar-section--visible, to: .js-ui-toolbar-wordlist;">
+      <i class="digicon-tools-wordlists"></i>
+      <!-- <div class="icon-toolbar-wordlist"></div>-->
+      <div class="ui-toolbar-icon--title">Ordlistor</div>
+    </div>
+    <div class="ui-toolbar-icon" data-anijs="if:click, do: $removeClass ui-toolbar-icon--selected, to: .ui-toolbar-icon; if:click, do: $addClass ui-toolbar-icon--selected, to: target; if:click, do: $addClass ui-toolbar--opened, to: body; if:click, do: $removeClass ui-toolbar-section--visible, to: .ui-toolbar-section; if:click, do: $toggleClass ui-toolbar-section--visible, to: .js-ui-toolbar-help;">
+      <i class="digicon-tools-help"></i>
+      <!--<div class="icon-toolbar-help"></div>-->
+      <div class="ui-toolbar-icon--title">Hjälp</div>
+    </div>
+  </div>
+  <div class="ui-toolbar-content">
+    <!-- Instud -->
+    <div class="ui-toolbar-section js-ui-toolbar-instud">
+      <h2 class="ui-text-h2">Instuderingsfrågor</h2>
+      <div id="editor1"></div>
+      <script>
+          // Replace the <textarea id="editor1"> with a CKEditor
+          // instance, using default configuration.
+          CKEDITOR.replace( 'editor1' );
+      </script>
+    </div>
+    <!-- Assignments -->
+    <div class="ui-toolbar-section js-ui-toolbar-assignments">
+      <h2 class="ui-text-h2">Övningar</h2>
+      <div class="ui-media">
+        <div class="ui-media-object">
+          <div class="mdi mdi-microphone"></div>
+        </div>
+        <div class="ui-media-content">
+          <h4 class="ui-media-content-heading">Diskussion</h4>
+        </div>
+      </div>
+      <div class="ui-media">
+        <div class="ui-media-object">
+          <div class="mdi mdi-file-image"></div>
+        </div>
+        <div class="ui-media-content">
+          <h4 class="ui-media-content-heading">Diagnos</h4>
+        </div>
+      </div>
+    </div>
+    <!-- Quiz -->
+    <div class="ui-toolbar-section js-ui-toolbar-quiz">
+      <h2 class="ui-text-h2">Quiz</h2>
+        <div class="ui-block">
+    <div class="ui-block-heading">
+      <h2>Världshistorien fram till vår tid</h2>
+    </div>
+    <div class="ui-block-content">
+      <p>När byggdes pyramiderna i Egypten?</p>
+      <div class="ui-form-radio ui-form-row">
+        <input class="ui-form-radio-input" type="radio" name="quiz" value="Red" id="quiz1">
+        <label class="ui-form-label" for="quiz1">Minska rörelse</label>
+      </div>
+      <div class="ui-form-radio">
+        <input class="ui-form-radio-input" type="radio" name="quiz" value="Red" id="quiz2">
+        <label class="ui-form-label" for="quiz2">Minska rörelse</label>
+      </div>
+    </div>
+    <div class="ui-block-footer">
+      <div class="ui-pagination-jump">
+        <a class="ui-pagination-prev"><span class="mdi mdi-chevron-left"></span></a>
+        <div class="ui-pagination-jumpto"><input type="text" placeholder="1" class="ui-form-input ui-form--inline"> / 2</div>
+        <a href="lf-creative-ckeditor.html" class="ui-pagination-next"><span class="mdi mdi-chevron-right"></a>
+      </div>
+    </div>
+  </div>
+  <a href="#" class="ui-btn--success">Rätta svaret</a>
+  <a class="ui-btn--default">Kontrollera alla svar</a>
+
+    </div>
+    <!-- Notes -->
+    <div class="ui-toolbar-section js-ui-toolbar-notes">
+      <div class="ui-alert--success">Din lärare ser inte dina anteckningar</div>
+      <h2 class="ui-text-h2">Anteckna</h2>
+      <div id="editor2"></div>
+      <script>
+          // Replace the <textarea id="editor1"> with a CKEditor
+          // instance, using default configuration.
+          CKEDITOR.replace( 'editor2' );
+      </script>
+    </div>
+    <!-- Wordlists -->
+    <div class="ui-toolbar-section js-ui-toolbar-wordlist">
+      <h2 class="ui-text-h2">Ordlistor</h2>
+<div class="modal-overlay js-edit-word modal-overlay--visible modal-overlay--out">
+  <article class="modal-body">
+    <main class="modal-content">
+      <h1 class="ui-text-h1">Redigera ord</h1>
+      <div class="ui-form-selects ui-form-row">
+        <select>
+          <option>Flytta till lista:</option>
+          <option>Översättning</option>
+          <option>Blandat</option>
+        </select>
+      </div>
+      <div class="ui-form-labeled-input ui-form-row">
+        <label class="ui-form-label">Ord</label>
+        <input type="text" placeholder="Sssup" class="ui-form-input">
+      </div>
+      <div class="ui-form-labeled-input ui-form-row">
+        <label class="ui-form-label">Förklaring</label>
+        <input type="text" placeholder="hey" class="ui-form-input">
+      </div>
+    </main>
+    <footer class="modal-footer">
+      <a href="#" class="ui-btn--error"><strong>Ta bort</strong></a>
+      <a href="#" class="ui-btn--success" data-anijs="if: click, do: $addClass modal-overlay--out, to: .js-edit-word;if: click, do: $removeClass modal-overlay--visible, to: .js-edit-word;"><strong>Spara</strong></a>
+    </footer>
+  </article>
+</div>
+
+
+<div class="modal-overlay js-create-list modal-overlay--visible modal-overlay--out">
+  <article class="modal-body">
+    <main class="modal-content">
+      <h1 class="ui-text-h1">Ny lista</h1>
+
+      <div class="ui-form-labeled-input ui-form-row">
+        <label class="ui-form-label">Listans namn</label>
+        <input type="text" placeholder="Sssup" class="ui-form-input">
+      </div>
+    </main>
+    <footer class="modal-footer">
+      <a href="#" class="ui-btn--error"><strong>Avbryt</strong></a>
+      <a href="#" class="ui-btn--success" data-anijs="if: click, do: $addClass modal-overlay--out, to: .js-create-list;if: click, do: $removeClass modal-overlay--visible, to: .js-create-list;"><strong>Spara</strong></a>
+    </footer>
+  </article>
+</div>
+
+<div class="modal-overlay js-create-word modal-overlay--visible modal-overlay--out">
+  <article class="modal-body">
+    <main class="modal-content">
+      <h1 class="ui-text-h1">Nytt ord</h1>
+      <div class="ui-form-selects ui-form-row">
+        <select>
+          <option>Lägg till i lista:</option>
+          <option>Översättning</option>
+          <option>Blandat</option>
+        </select>
+      </div>
+      <div class="ui-form-labeled-input ui-form-row">
+        <label class="ui-form-label">Ord</label>
+        <input type="text" placeholder="Sssup" class="ui-form-input">
+      </div>
+      <div class="ui-form-labeled-input ui-form-row">
+        <label class="ui-form-label">Förklaring</label>
+        <input type="text" placeholder="hey" class="ui-form-input">
+      </div>
+    </main>
+    <footer class="modal-footer">
+      <a href="#" class="ui-btn--error"><strong>Ta bort</strong></a>
+      <a href="#" class="ui-btn--success" data-anijs="if: click, do: $addClass modal-overlay--out, to: .js-create-word;if: click, do: $removeClass modal-overlay--visible, to: .js-create-word;"><strong>Spara</strong></a>
+    </footer>
+  </article>
+</div>
+
+<div class="ui-alert--info spacing-bottom">
+  <h4 class="ui-text-h4">Det finns ett förhör till detta kapitel</h4>
+  <a href="app-glossary.html" class="ui-btn--success">Starta</a>
+</div>
+<div class="ui-tabs spacing-bottom">
+  <a href="#" class="ui-tab ui-tab--active" data-anijs="if:click, do: $removeClass ui-tab-pane--active, to: .ui-tab-pane; if:click, do: $addClass ui-tab-pane--active, to: .ui-tab-pane-1; if:click, do: $removeClass ui-tab--active, to: .ui-tab; if:click, do: $addClass ui-tab--active, to: target">Från läraren</a>
+  <a href="#" class="ui-tab" data-anijs="if:click, do: $removeClass ui-tab-pane--active, to: .ui-tab-pane; if:click, do: $addClass ui-tab-pane--active, to: .ui-tab-pane-2; if:click, do: $removeClass ui-tab--active, to: .ui-tab; if:click, do: $addClass ui-tab--active, to: target">Läromedlet</a>
+</div>
+<div class="ui-form-selects spacing-bottom">
+  <select>
+    <option>Ord</option>
+    <option>Översättning</option>
+    <option>Båda</option>
+  </select>
+</div>
+<div class="ui-tab-pane ui-tab-pane--active ui-tab-pane-1">
+  <div class="ui-block">
+    <div class="ui-block-list-item">
+      <div class="ui-block-list-content"><strong>Ostfralla</strong><br> - Cheesefrall</div>
+      <div class="ui-block-list-action"><i class="digicon-edit" data-anijs="if:click, do: $removeClass modal-overlay--out, to: .js-edit-word; if:click, do: $addClass modal-overlay--visible, to: .js-edit-word"></i></div>
+      <div class="ui-block-list-action"><i class="mdi mdi-drag"></i></div>
+    </div>
+    <div class="ui-block-list-item">
+      <div class="ui-block-list-content"><strong>Ostfralla</strong><br> - Cheesefrall is nice and good for breakfast. Easy and fast food for the intelligent person</div>
+      <div class="ui-block-list-action"><i class="digicon-edit" data-anijs="if:click, do: $removeClass modal-overlay--out, to: .js-edit-word; if:click, do: $addClass modal-overlay--visible, to: .js-edit-word"></i></div>
+      <div class="ui-block-list-action"><i class="mdi mdi-drag"></i></div>
+    </div>
+    <div class="ui-block-list-item">
+      <div class="ui-block-list-content">Ostfralla</div>
+      <div class="ui-block-list-action"><i class="digicon-edit" data-anijs="if:click, do: $removeClass modal-overlay--out, to: .js-edit-word; if:click, do: $addClass modal-overlay--visible, to: .js-edit-word"></i></div>
+      <div class="ui-block-list-action"><i class="mdi mdi-drag"></i></div>
+    </div>
+  </div>
+</div>
+<div class="ui-tab-pane ui-tab-pane-2">
+  <i>Det finns inga listor för läromedlet</i>
+</div>
+
+    </div>
+    <!-- Help -->
+    <div class="ui-toolbar-section js-ui-toolbar-help">
+      <h2 class="ui-text-h2">Hjälp</h2>
+
+    </div>
+  </div>
+
+</nav>
+
+  
+
+
+      </main>
+
+      
+<div class="ui-sm-nav ui-icon-bar">
+  <div class="ui-icon-bar-area--left">
+  </div>
+  <div class="ui-icon-bar-area--center">
+    <a href="#" class="ui-icon-bar-icon" data-anijs="if:click, do: $toggleClass ui-flow-nav--visible, to: .ui-flow-nav"><div class="mdi mdi-dots-horizontal"></div></a>
+  </div>
+  <div class="ui-icon-bar-area--right">
+    <a href="#" class="ui-icon-bar-icon" data-anijs="if:click, do: $toggleClass ui-toolbar--visible, to: .ui-toolbar"><div class="mdi mdi-content-cut"></div></a>
+  </div>
+</div>
+
+
+      <nav class="js-panel-settings ui-panel ui-panel--right">
+  <div class="ui-panel-header justify--space-between">
+    <h2 class="ui-panel-heading">Inställningar</h2>
+    <div class="ui-panel-close" data-anijs="if: click, on: .ui-panel-close, do: $removeClass ui-panel--visible, to: .ui-panel"><i class="digicon-close"></i></div>
+  </div>
+  <div class="ui-panel-content">
+    <div class="ui-form-row">
+      <h2 class="ui-text-h3"><i class="digicon-help-ruler"></i> Läslinjal</h2>
+      <p>Stäng av animationer. Gränssnittet kan upplevas kvickare</p>
+      <div class="ui-onoffswitch">
+        <input type="checkbox" name="onoffswitch" class="ui-onoffswitch-checkbox" id="myonoffswitch" checked>
+        <label class="ui-onoffswitch-label" for="myonoffswitch">
+            <span class="ui-onoffswitch-inner"></span>
+            <span class="ui-onoffswitch-switch"></span>
+        </label>
+      </div>
+    </div>
+    <div class="ui-form-row">
+      <h2 class="ui-text-h3"><i class="digicon-animation"></i> Animationer</h2>
+      <p>Stäng av animationer. Gränssnittet kan upplevas kvickare</p>
+      <div class="ui-onoffswitch">
+        <input type="checkbox" name="onoffswitch" class="ui-onoffswitch-checkbox" id="myonoffswitch" checked>
+        <label class="ui-onoffswitch-label" for="myonoffswitch">
+            <span class="ui-onoffswitch-inner"></span>
+            <span class="ui-onoffswitch-switch"></span>
+        </label>
+      </div>
+    </div>
+    <div class="ui-form-row">
+      <h2 class="ui-text-h3"><i class="digicon-palette"></i> Färgmarkeringar</h2>
+      <p>visa färgmarkeringar på ord som exempelvis fördjupningar, ordförklaringar etc</p>
+      <div class="ui-onoffswitch">
+        <input type="checkbox" name="onoffswitch" class="ui-onoffswitch-checkbox" id="myonoffswitch" checked>
+        <label class="ui-onoffswitch-label" for="myonoffswitch">
+            <span class="ui-onoffswitch-inner"></span>
+            <span class="ui-onoffswitch-switch"></span>
+        </label>
+      </div>
+    </div>
+    <h2 class="ui-text-h3"><i class="digicon-textsettings"></i>Textinställningar</h2>
+    <div class="ui-form-row">
+      <label class="ui-form-label">Textstorlek</label>
+      <input type="range" min="0" max="6" class="ui-form-range">
+    </div>
+    <div class="ui-form-row">
+      <label class="ui-form-label">Typsnitt</label>
+      <div class="ui-form-selects">
+        <select>
+          <option>Ordlista</option>
+          <option>Select 2</option>
+          <option>Select 3</option>
+          <option>Select 4</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+</nav>
+
+
+      <nav class="js-panel-search ui-panel ui-panel--right">
+  <div class="ui-panel-header justify--space-between">
+    <h2 class="ui-panel-heading">Sök</h2>
+    <div class="ui-panel-close"><i class="digicon-close"></i></div>
+  </div>
+  <div class="ui-panel-content">
+    <input type="text" class="ui-form-input" placeholder="Sök i digilär..">
+    <h2 class="ui-text-h2">Kapitel</h2>
+    <div class="ui-media ui-media--selected">
+      <div class="ui-media-object">
+        <img src="http://placehold.it/60x60">
+      </div>
+      <div class="ui-media-content">
+        <small>Bild 1</small>
+        <div class="ui-media-content-heading">Forntiden</div>
+      </div>
+    </div>
+
+    <div class="ui-media">
+      <div class="ui-media-object">
+        <img src="http://placehold.it/60x60">
+      </div>
+      <div class="ui-media-content">
+        <small>Bild 1</small>
+        <div class="ui-media-content-heading">Forntiden</div>
+      </div>
+    </div>
+
+    <h2 class="ui-text-h2">Bildserier</h2>
+    <div class="ui-media ui-media--selected">
+      <div class="ui-media-object">
+        <img src="http://placehold.it/60x60">
+      </div>
+      <div class="ui-media-content">
+        <small>Bild 1</small>
+        <div class="ui-media-content-heading">Forntiden</div>
+      </div>
+    </div>
+
+    <div class="ui-media">
+      <div class="ui-media-object">
+        <img src="http://placehold.it/60x60">
+      </div>
+      <div class="ui-media-content">
+        <small>Bild 1</small>
+        <div class="ui-media-content-heading">Forntiden</div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+      <nav class="js-panel-audit ui-panel ui-panel--right">
+  <div class="ui-panel-header justify--space-between">
+    <h2 class="ui-panel-heading">Granska</h2>
+    <div class="ui-panel-close"><i class="mdi mdi-close-circle"></i></div>
+  </div>
+  <div class="ui-panel-content ui-typography">
+    <h3>Uppgift 1</h3>
+    <a href="#" class="ui-link">Visa fråga...</a>
+    <h3>Svar</h3>
+    <p>Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldus PageMaker.</p>
+    <p><i>Ingen tidigare konversation</i></p>
+    <div class="ui-form-row"><textarea class="ui-form-input">Kommentera</textarea></div>
+    <div class="ui-form-row">
+      <div class="ui-form-checkbox">
+        <input class="ui-form-checkbox-input" type="checkbox" name="animations" value="Yellow" id="yes">
+        <label class="ui-form-label" for="yes">Publicera med enter</label>
+      </div>
+    </div>
+    <a href="#" class="ui-btn--outline">Markera som läst</a>
+    <a href="#" class="ui-btn--success">Kommentera</a>
+    </div>
+  </div>
+</nav>
+
+
+      <nav class="ui-panel ui-panel--right ui-panel--toTop ui-mobile-main-nav">
+  <div class="ui-panel-header ui-justify--space-between">
+    <h2 class="ui-panel-heading">Huvudmeny</h2>
+    <div class="ui-panel-close"><i class="mdi mdi-close-circle"></i></div>
+  </div>
+  <div class="ui-panel-content">
+    <div class="ui-bar-item">
+      <div class="ui-header-settings-avatar">
+        <i class="digicon-avatar digicon-2x"></i>
+      </div>
+      <a class="ui-text-h2 ui-header-settings-name" href="overview-start.html"> Martin Berggren</a>
+      <span><i class="mdi mdi-arrow-left"></i>Till hemskärmen</span>
+    </div>
+    <ul class="ui-nav">
+      <li class="ui-nav-item"><a href="work-areas.html">Religionskunskap</a></li>
+      <li class="ui-nav-item">
+        <a href="vignette.html">Vinjett</a>
+      </li>
+      <li class="ui-nav-item">
+        <a href="ch-default.html">Kapitel</a>
+        <i class="ui-nav-children-toggle mdi mdi-chevron-down" data-anijs="if: click, do:$toggleClass ui-nav-children--visible, to: .ui-nav-children"></i>
+        <ul class="ui-nav-children">
+          <li class="ui-nav-item"><a href="ch-default.html">Forntiden</a></li>
+          <li class="ui-nav-item"><a href="ch-default.html">Forntiden</a></li>
+          <li class="ui-nav-item"><a href="ch-default.html">Forntiden</a></li>
+          <li class="ui-nav-item"><a href="ch-default.html">Forntiden</a></li>
+          <li class="ui-nav-item"><a href="ch-default.html">Forntiden</a></li>
+        </ul>
+      </li>
+      <li class="ui-nav-item">
+        <a href="imgs-default.html">Bildserie</a>
+      </li>
+      <li class="ui-nav-item">
+        <a href="lf-video.html">Arbetsflöde</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+      
+
+      <!-- AniJS core library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      <script src="../../bower_components/anijs/dist/anijs-min.js"></script>
+      <script src="../../bower_components/anijs/dist/helpers/dom/anijs-helper-dom-min.js"></script>
+      <script src="../../bower_components/scrollReveal.js/dist/scrollReveal.js"></script>
+      <script>
+
+        var config = {
+          easing: 'hustle',
+          reset:  true,
+          delay:  'onload',
+          vFactor: 0.20,
+          viewport: document.getElementById('scrollReveal')
+        }
+
+        window.sr = new scrollReveal( config );
+
+      </script>
+      <script src="../../assets/scripts/app.min.js"></script>
+
+    </body>
+</html>

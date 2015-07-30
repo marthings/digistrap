@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en" class="ui-app">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="generator" content="Digilär - digitala läromedel" />
+      <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+      <!-- Chrome for Android theme color -->
+      <meta name="theme-color" content="#303F9F">
+
+      <!-- Web Application Manifest -->
+      <link rel="manifest" href="manifest.json">
+
+      <!-- Tile and Title for Win8 -->
+      <meta name="msapplication-TileColor" content="#402341">
+
+      <!-- Add to homescreen for Chrome on Android -->
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="application-name" content="Digilär - digitala läromedel">
+      <link rel="icon" sizes="192x192" href="assets/touch/chrome-touch-icon-192x192.png">
+
+      <!-- Add to homescreen for Safari on iOS -->
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta name="apple-mobile-web-app-title" content="Digilär - digitala läromedel">
+      <link rel="apple-touch-icon" href="assets/touch/apple-touch-icon.png">
+
+      <!-- Tile icon for Win8 (144x144) -->
+      <meta name="application-name" content="&nbsp;"/>
+      <meta name="msapplication-TileColor" content="#402341"/>
+      <meta name="msapplication-square70x70logo" content="assets/touch/tiny.png"/>
+      <meta name="msapplication-square150x150logo" content="assets/touch/square.png"/>
+      <meta name="msapplication-wide310x150logo" content="assets/touch/wide.png"/>
+      <meta name="msapplication-square310x310logo" content="assets/touch/large.png"/>
+
+      <!-- Title block allowing child pages to override -->
+      <title>UI - demo / prototyp </title>
+
+      <!-- Local ckeditor -->
+      <script src="//cdn.ckeditor.com/4.4.7/basic/ckeditor.js"></script>
+
+      <!-- Styles -->
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,600,700,300' rel='stylesheet' type='text/css'>
+
+      <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
+
+      <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" media="all"/>
+
+      
+    </head>
+    <body class="ui-body ">
+
+      <nav class="ui-header">
+
+  <div class="ui-header-nav">
+    <div class="ui-header-settings">
+      <div class="ui-header-settings-avatar">
+        <i class="digicon-avatar"></i>
+      </div>
+      <div class="ui-header-settings-user">
+        <a class="ui-header-settings-name" href="ui/content/overview-start.html"> Martin Berggren</a>
+      </div>
+      <div class="ui-ping--error">2</div>
+    </div>
+    <div class="ui-header-bread">
+      <ul class="ui-breadcrumb">
+        <li>
+          <button class="ui-btn-dropdown ui-btn--link">
+            <a href="ui/content/work-areas.html">Religionskunskap</a>
+            <div class="ui-btn-dropdown-toggle-white" data-anijs="if: click, do: $toggleClass ui-dropdown--visible, to: .js-topic-dropdown">
+            </div>
+            <div class="ui-dropdown js-topic-dropdown">
+              <ul>
+                <li><a href="#">Ämne</a></li>
+                <li><a href="#">Ämne</a></li>
+                <li><a href="#">Ämne</a></li>
+                <li><a href="#">Ämne</a></li>
+              </ul>
+            </div>
+          </button>
+        </li>
+        <li>
+          <a href="ui/content/vignette.html" class="ui-btn--link">Vinjett</a>
+        </li>
+        <li>
+          <button class="ui-btn-dropdown ui-btn--link">
+            <a href="ui/content/ch-default.html">Kapitel</a>
+            <div class="ui-btn-dropdown-toggle-white" data-anijs="if: click, do: $toggleClass ui-dropdown--visible, to: .js-chapter-dropdown">
+            </div>
+            <div class="ui-dropdown js-chapter-dropdown">
+              <ul>
+                <li><a href="#">Forntiden</a></li>
+                <li><a href="#">I rymden lever alla lika länge</a></li>
+                <li><a href="#">Dropdown list</a></li>
+                <li><a href="#">Dropdown list</a></li>
+              </ul>
+            </div>
+          </button>
+        </li>
+        <li>
+          <a href="ui/content/imgs-default.html" class="ui-btn--link ">Bildserie</a>
+        </li>
+        <li>
+          <a href="ui/content/lf-video.html" class="ui-btn--link ">Arbetsflöde</a>
+        </li>
+      </ul>
+    </div>
+    <div class="ui-header-tools">
+      <div class="ui-header-tool" data-anijs="if: click, do: $addClass ui-panel--visible, to: .js-panel-search">
+        <i class="digicon-magnifier digicon-magnifier-white"></i>
+      </div>
+      <a class="ui-logo" href="ui/content/overview-start.html"><div class="digicon-logo"></div></a>
+    </div>
+  </div>
+  <div class="ui-header-mobile-nav ui-icon-bar">
+    <div class="ui-icon-bar-area--left">
+      <a href="#" class="ui-back-history ui-icon-bar-icon"><i class="digicon-continue-white"></i></a>
+      <div class="ui-icon-bar-icon">
+        <i class="digicon-bookmark-outline-white"></i>
+      </div>
+    </div>
+    <div class="ui-icon-bar-area--center">
+      <a class="ui-logo ui-icon-bar-icon" href="ui/content/overview-start.html"><div class="digicon-logo"></div></a>
+    </div>
+    <div class="ui-icon-bar-area--right">
+      <div class="ui-icon-bar-icon ui-header-search" data-anijs="if: click, do: $addClass ui-panel--visible, to: .js-panel-search">
+        <div class="digicon-magnifier-white"></div>
+      </div>
+      <div class="ui-icon-bar-icon ui-header-toggle" data-anijs="if: click, do: $addClass ui-panel--visible, to: .ui-mobile-main-nav">
+        <i class="digicon-hamburger-white"></i>
+      </div>
+    </div>
+  </div>
+</nav>
+
+      <main class="ui-wrapper">
+
+        
+  <div class="ui-section">
+    
+<div class="ui-content ui-content--padded">
+	<h1 class="ui-text-h1">Digilär framework 2.0</h1>
+	<p class="ui-lead">Bootstraping UI components and templates</p>
+	<a class="ui-btn--default" href="ui/content/overview-start.html">UI Prototype</a>
+	<h2 class="ui-text-h2">Documentation</h2>
+	<p class="ui-lead">Visit the documentation</p>
+	<a class="ui-btn--default" href="ui/content/overview-start.html">Documentation site</a>
+</div>
+
+	<!-- TODO: Create my project :-) -->
+
+  </div>
+  
+
+
+      </main>
+
+      
+
+      <nav class="js-panel-settings ui-panel ui-panel--right">
+  <div class="ui-panel-header justify--space-between">
+    <h2 class="ui-panel-heading">Inställningar</h2>
+    <div class="ui-panel-close" data-anijs="if: click, on: .ui-panel-close, do: $removeClass ui-panel--visible, to: .ui-panel"><i class="digicon-close"></i></div>
+  </div>
+  <div class="ui-panel-content">
+    <div class="ui-form-row">
+      <h2 class="ui-text-h3"><i class="digicon-help-ruler"></i> Läslinjal</h2>
+      <p>Stäng av animationer. Gränssnittet kan upplevas kvickare</p>
+      <div class="ui-onoffswitch">
+        <input type="checkbox" name="onoffswitch" class="ui-onoffswitch-checkbox" id="myonoffswitch" checked>
+        <label class="ui-onoffswitch-label" for="myonoffswitch">
+            <span class="ui-onoffswitch-inner"></span>
+            <span class="ui-onoffswitch-switch"></span>
+        </label>
+      </div>
+    </div>
+    <div class="ui-form-row">
+      <h2 class="ui-text-h3"><i class="digicon-animation"></i> Animationer</h2>
+      <p>Stäng av animationer. Gränssnittet kan upplevas kvickare</p>
+      <div class="ui-onoffswitch">
+        <input type="checkbox" name="onoffswitch" class="ui-onoffswitch-checkbox" id="myonoffswitch" checked>
+        <label class="ui-onoffswitch-label" for="myonoffswitch">
+            <span class="ui-onoffswitch-inner"></span>
+            <span class="ui-onoffswitch-switch"></span>
+        </label>
+      </div>
+    </div>
+    <div class="ui-form-row">
+      <h2 class="ui-text-h3"><i class="digicon-palette"></i> Färgmarkeringar</h2>
+      <p>visa färgmarkeringar på ord som exempelvis fördjupningar, ordförklaringar etc</p>
+      <div class="ui-onoffswitch">
+        <input type="checkbox" name="onoffswitch" class="ui-onoffswitch-checkbox" id="myonoffswitch" checked>
+        <label class="ui-onoffswitch-label" for="myonoffswitch">
+            <span class="ui-onoffswitch-inner"></span>
+            <span class="ui-onoffswitch-switch"></span>
+        </label>
+      </div>
+    </div>
+    <h2 class="ui-text-h3"><i class="digicon-textsettings"></i>Textinställningar</h2>
+    <div class="ui-form-row">
+      <label class="ui-form-label">Textstorlek</label>
+      <input type="range" min="0" max="6" class="ui-form-range">
+    </div>
+    <div class="ui-form-row">
+      <label class="ui-form-label">Typsnitt</label>
+      <div class="ui-form-selects">
+        <select>
+          <option>Ordlista</option>
+          <option>Select 2</option>
+          <option>Select 3</option>
+          <option>Select 4</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+</nav>
+
+
+      <nav class="js-panel-search ui-panel ui-panel--right">
+  <div class="ui-panel-header justify--space-between">
+    <h2 class="ui-panel-heading">Sök</h2>
+    <div class="ui-panel-close"><i class="digicon-close"></i></div>
+  </div>
+  <div class="ui-panel-content">
+    <input type="text" class="ui-form-input" placeholder="Sök i digilär..">
+    <h2 class="ui-text-h2">Kapitel</h2>
+    <div class="ui-media ui-media--selected">
+      <div class="ui-media-object">
+        <img src="http://placehold.it/60x60">
+      </div>
+      <div class="ui-media-content">
+        <small>Bild 1</small>
+        <div class="ui-media-content-heading">Forntiden</div>
+      </div>
+    </div>
+
+    <div class="ui-media">
+      <div class="ui-media-object">
+        <img src="http://placehold.it/60x60">
+      </div>
+      <div class="ui-media-content">
+        <small>Bild 1</small>
+        <div class="ui-media-content-heading">Forntiden</div>
+      </div>
+    </div>
+
+    <h2 class="ui-text-h2">Bildserier</h2>
+    <div class="ui-media ui-media--selected">
+      <div class="ui-media-object">
+        <img src="http://placehold.it/60x60">
+      </div>
+      <div class="ui-media-content">
+        <small>Bild 1</small>
+        <div class="ui-media-content-heading">Forntiden</div>
+      </div>
+    </div>
+
+    <div class="ui-media">
+      <div class="ui-media-object">
+        <img src="http://placehold.it/60x60">
+      </div>
+      <div class="ui-media-content">
+        <small>Bild 1</small>
+        <div class="ui-media-content-heading">Forntiden</div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+      <nav class="js-panel-audit ui-panel ui-panel--right">
+  <div class="ui-panel-header justify--space-between">
+    <h2 class="ui-panel-heading">Granska</h2>
+    <div class="ui-panel-close"><i class="mdi mdi-close-circle"></i></div>
+  </div>
+  <div class="ui-panel-content ui-typography">
+    <h3>Uppgift 1</h3>
+    <a href="#" class="ui-link">Visa fråga...</a>
+    <h3>Svar</h3>
+    <p>Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldus PageMaker.</p>
+    <p><i>Ingen tidigare konversation</i></p>
+    <div class="ui-form-row"><textarea class="ui-form-input">Kommentera</textarea></div>
+    <div class="ui-form-row">
+      <div class="ui-form-checkbox">
+        <input class="ui-form-checkbox-input" type="checkbox" name="animations" value="Yellow" id="yes">
+        <label class="ui-form-label" for="yes">Publicera med enter</label>
+      </div>
+    </div>
+    <a href="#" class="ui-btn--outline">Markera som läst</a>
+    <a href="#" class="ui-btn--success">Kommentera</a>
+    </div>
+  </div>
+</nav>
+
+
+      <nav class="ui-panel ui-panel--right ui-panel--toTop ui-mobile-main-nav">
+  <div class="ui-panel-header ui-justify--space-between">
+    <h2 class="ui-panel-heading">Huvudmeny</h2>
+    <div class="ui-panel-close"><i class="mdi mdi-close-circle"></i></div>
+  </div>
+  <div class="ui-panel-content">
+    <div class="ui-bar-item">
+      <div class="ui-header-settings-avatar">
+        <i class="digicon-avatar digicon-2x"></i>
+      </div>
+      <a class="ui-text-h2 ui-header-settings-name" href="ui/content/overview-start.html"> Martin Berggren</a>
+      <span><i class="mdi mdi-arrow-left"></i>Till hemskärmen</span>
+    </div>
+    <ul class="ui-nav">
+      <li class="ui-nav-item"><a href="ui/content/work-areas.html">Religionskunskap</a></li>
+      <li class="ui-nav-item">
+        <a href="ui/content/vignette.html">Vinjett</a>
+      </li>
+      <li class="ui-nav-item">
+        <a href="ui/content/ch-default.html">Kapitel</a>
+        <i class="ui-nav-children-toggle mdi mdi-chevron-down" data-anijs="if: click, do:$toggleClass ui-nav-children--visible, to: .ui-nav-children"></i>
+        <ul class="ui-nav-children">
+          <li class="ui-nav-item"><a href="ui/content/ch-default.html">Forntiden</a></li>
+          <li class="ui-nav-item"><a href="ui/content/ch-default.html">Forntiden</a></li>
+          <li class="ui-nav-item"><a href="ui/content/ch-default.html">Forntiden</a></li>
+          <li class="ui-nav-item"><a href="ui/content/ch-default.html">Forntiden</a></li>
+          <li class="ui-nav-item"><a href="ui/content/ch-default.html">Forntiden</a></li>
+        </ul>
+      </li>
+      <li class="ui-nav-item">
+        <a href="ui/content/imgs-default.html">Bildserie</a>
+      </li>
+      <li class="ui-nav-item">
+        <a href="ui/content/lf-video.html">Arbetsflöde</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+      
+
+      <!-- AniJS core library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      <script src="bower_components/anijs/dist/anijs-min.js"></script>
+      <script src="bower_components/anijs/dist/helpers/dom/anijs-helper-dom-min.js"></script>
+      <script src="bower_components/scrollReveal.js/dist/scrollReveal.js"></script>
+      <script>
+
+        var config = {
+          easing: 'hustle',
+          reset:  true,
+          delay:  'onload',
+          vFactor: 0.20,
+          viewport: document.getElementById('scrollReveal')
+        }
+
+        window.sr = new scrollReveal( config );
+
+      </script>
+      <script src="assets/scripts/app.min.js"></script>
+
+    </body>
+</html>
