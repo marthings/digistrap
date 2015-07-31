@@ -140,8 +140,10 @@
 
   <nav class="ui-sidebar">
     <div class="ui-content">
+      <div class="spacing-top">
+        <a class="ui-btn ui-btn--default ui-btn--block" data-anijs="if:click, do:$removeClass modal-overlay--out, to: .modal-overlay; if:click, do:$addClass modal-overlay--visible, to: .modal-overlay">Introduktion</a>
+      </div>
       <ul class="ui-nav">
-        <li class="ui-nav-heading" data-anijs="if:click, do:$removeClass modal-overlay--out, to: .modal-overlay; if:click, do:$addClass modal-overlay--visible, to: .modal-overlay">Introduktion</li>
         <li class="ui-nav-heading">Kapitel</li>
         <li><a class="ui-nav-item" href="#">Forntiden</a></li>
       </ul>
@@ -357,8 +359,8 @@
     <div class="ui-toolbar-section js-ui-toolbar-quiz">
       <h2 class="ui-text-h2">Quiz</h2>
         <div class="ui-block">
-    <div class="ui-block-heading">
-      <h2>Världshistorien fram till vår tid</h2>
+    <div class="ui-block-header">
+      <h2 class="ui-block-title">Världshistorien fram till vår tid</h2>
     </div>
     <div class="ui-block-content">
       <p>När byggdes pyramiderna i Egypten?</p>
